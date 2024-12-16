@@ -1,50 +1,13 @@
-# Glue Factory ERP Web App
+# ERP System
 
-Welcome to the Glue Factory ERP Web App! This application is designed to streamline the management of your glue manufacturing business operations, providing comprehensive Enterprise Resource Planning (ERP) functionalities tailored specifically for the needs of glue production.
+This is a web-based ERP system built using Laravel. The application is designed to streamline and integrate various business operations, including inventory management, etc.
 
-## Features
+## Installation Guide
 
-1. **Product Management**: Efficiently manage all aspects of your products, including creation, editing, and deletion.
+To set up the ERP system on your local environment, first, clone the repository using the command `git clone https://github.com/your-username/erp-system.git`. Navigate into the project folder using `cd erp-system` and install all necessary dependencies by running `composer install` or `composer update`.
 
-2. **Manufacturing Order**: Streamline the manufacturing process by creating and tracking manufacturing orders to ensure timely production.
+Next, create a `.env` file in the project root by copying the existing `.env.example` file. You can do this using the command `cp .env.example .env`. Open the `.env` file and configure your database connection by setting the following values:
 
-3. **Purchasing**: Simplify procurement processes by managing purchase orders, supplier information, and inventory levels.
+After configuring the database, import the provided `erp_database.sql` file into your MySQL database. To do this, open phpMyAdmin in your browser, create or select a database named `erp`, click the **Import** tab, and upload the `erp_database.sql` file. Once the import is complete, the database structure and initial data will be ready.
 
-4. **Request for Quotation (RFQ)**: Easily request quotes from vendors for required materials and services, and compare offers to make informed purchasing decisions.
-
-5. **Vendor Management**: Maintain a database of vendors, including contact information, performance history, and contracts.
-
-6. **Sales Management**: Manage sales orders, customer information, and invoices to streamline the sales process and improve customer satisfaction.
-
-7. **Bill of Materials (BOM)**: Create and manage BOMs to define the materials and components required for production, facilitating accurate inventory management and production planning.
-
-
-## Technologies Used
-
-- **Backend**:
-  - Laravel
-  - PHP
-  - MySQL
-
-- **Frontend**:
-  - Blade Templates
-  - CSS/SCSS
-  - JavaScript
-
-## Contributing
-
-We welcome contributions from the community to improve the Glue Factory ERP Web App. Feel free to fork the repository, make changes, and submit a pull request.
-
-Before contributing, please review the [contributing guidelines](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Support
-
-For any questions or issues, please contact [support@example.com](mailto:support@example.com).
-
----
-
-Feel free to customize this README.md according to your specific project details and requirements.
+Finally, generate the application key using the command `php artisan key:generate`. To start the development server, run `php artisan serve` and open the application in your browser at the displayed URL. Your ERP system should now be up and running.
